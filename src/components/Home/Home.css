@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.image {
+  width: 200px;
+  height: 200px;
+}
+.button__cart {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.product__price {
+  text-decoration: line-through;
+}
