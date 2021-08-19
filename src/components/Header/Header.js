@@ -1,13 +1,11 @@
 import React from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div>
-      <img
-        className="img-fluid"
-        src="https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png"
-      />
-    </div>
+    <img
+      className="img-fluid"
+      src="https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png"
+    />
   );
 };
 

@@ -53,7 +53,7 @@ const initialState = {
     {
       id: 6,
       name: "Watch",
-      image: "6.jpg",
+      image: "7.jpg",
       price: 20,
       discount: 2,
       discountPrice: 20 - (2 / 100) * 20,

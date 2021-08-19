@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
+import "./Details.css";
 import currencyFormatter from "currency-formatter";
-import Button from "react-bootstrap/Button";
+import { Button } from "@material-ui/core";
 
 const Details = () => {
   const { id } = useParams();
@@ -16,27 +17,35 @@ const Details = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12">
-          <div className="detail__img">
-            <img src={`/images/${product.image}`} />
-          </div>
+        <div className="col">
+          <img src={`/images/${product.image}`} />
         </div>
-        <div className="detail__name">
+        <div className="col">
           <h1>{product.name}</h1>
-        </div>
-        <div className="detail__description">{product.desc}</div>
-        <div className="detail__price">
-          <h1>{currencyFormatter.format(product.price, { code: "USD" })}</h1>
-        </div>
-        <div className="discount__price">
-          <h1>
-            {currencyFormatter.format(product.discountPrice, {
-              code: "USD",
-            })}
-          </h1>
+          <p>{product.desc}</p>
+          <div className="row">
+            <div className="col-md-6 original__price">
+              <h1>
+                {currencyFormatter.format(product.price, { code: "USD" })}
+              </h1>
+            </div>
+            <div className="col-md-6">
+              <h1>
+                {currencyFormatter.format(product.discountPrice, {
+                  code: "USD",
+                })}
+              </h1>
+            </div>
+          </div>
+          <Button
+            variant="contained"
+            color="secondary"
+            className="button__cart"
+          >
+            Add To Cart
+          </Button>
         </div>
       </div>
-      <Button variant="primary">Add To Cart</Button>
     </div>
   );
 };

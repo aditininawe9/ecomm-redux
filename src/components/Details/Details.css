@@ -1,0 +1,10 @@
+img {
+  width: 550px;
+}
+.original__price {
+  text-decoration: line-through;
+}
+.button__cart {
+  width: 470px;
+  height: 50px;
+}

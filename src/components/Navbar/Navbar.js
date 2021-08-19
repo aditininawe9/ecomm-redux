@@ -11,10 +11,12 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
-          <img
-            className="header__logo"
-            src="https://www.searchpng.com/wp-content/uploads/2019/01/Myntra-logo-png-icon-715x715.png"
-          />
+          <Link to="/">
+            <img
+              className="header__logo"
+              src="https://www.searchpng.com/wp-content/uploads/2019/01/Myntra-logo-png-icon-715x715.png"
+            />
+          </Link>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
